@@ -13,6 +13,7 @@ function Homepage({ data, handleCart }) {
   const [category, setCategory] = useState(" ");
 
   const handlePage = (val, category) => {
+    console.log(val);
     setCategory(category);
     setVal(val);
     setShowContent1(!showContent1);
