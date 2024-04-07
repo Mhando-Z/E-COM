@@ -27,22 +27,22 @@ export function CartProvider({ children }) {
   const handleQuantityItem = async (productId, quantity) => {
     try {
       const { cart } = await commerce.cart.update(productId, { quantity });
-      setCart(cart);
       window.location.reload();
+      setCart(cart);
     } catch (error) {}
   };
   const handleRemoveItem = async (productId) => {
     try {
       const { cart } = await commerce.cart.remove(productId);
-      setCart(cart);
       window.location.reload();
+      setCart(cart);
     } catch (error) {}
   };
   const handleEmpty = async () => {
     try {
       const { cart } = await commerce.cart.empty();
-      setCart(cart);
       window.location.reload();
+      setCart(cart);
     } catch (error) {}
   };
 

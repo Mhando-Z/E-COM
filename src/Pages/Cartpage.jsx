@@ -42,7 +42,7 @@ function Cartpage() {
   return (
     <div>
       <div className="flex flex-col container mx-auto ">
-        <table className="table-auto w-full">
+        <table className="table-auto w-full  overflow-auto">
           <tbody className="gap-12">
             {cart.line_items.map((data, index) => {
               return (
