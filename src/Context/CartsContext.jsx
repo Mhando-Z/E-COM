@@ -20,6 +20,7 @@ export function CartProvider({ children }) {
   const handleAddtoCart = async (productId, quantity) => {
     try {
       const { cart } = await commerce.cart.add(productId, quantity);
+      window.location.reload();
       setCart(cart);
     } catch (error) {}
   };
