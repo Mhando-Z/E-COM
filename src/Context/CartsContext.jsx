@@ -21,29 +21,29 @@ export function CartProvider({ children }) {
   const handleAddtoCart = async (productId, quantity) => {
     try {
       const { cart } = await commerce.cart.add(productId, quantity);
-      window.location.reload();
       setCart(cart);
+      window.location.reload();
     } catch (error) {}
   };
   const handleQuantityItem = async (productId, quantity) => {
     try {
       const { cart } = await commerce.cart.update(productId, { quantity });
-      window.location.reload();
       setCart(cart);
+      window.location.reload();
     } catch (error) {}
   };
   const handleRemoveItem = async (productId) => {
     try {
       const { cart } = await commerce.cart.remove(productId);
-      window.location.reload();
       setCart(cart);
+      window.location.reload();
     } catch (error) {}
   };
   const handleEmpty = async () => {
     try {
       const { cart } = await commerce.cart.empty();
-      window.location.reload();
       setCart(cart);
+      window.location.reload();
     } catch (error) {}
   };
 

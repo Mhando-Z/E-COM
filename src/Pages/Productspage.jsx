@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ProductsContext from "../Context/ProductsContext";
 import CartContext from "../Context/CartsContext";
+import SimilarProducts from "../Components/SimilarProducts";
 
 function Productspage() {
   const { data } = useContext(ProductsContext);
@@ -18,7 +19,7 @@ function Productspage() {
   }
   const dataz = data.find((dt) => dt.id === id.substring(1));
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex flex-col justify-center">
       <div className="flex items-center justify-center">
         <div className="flex flex-col lg:flex-row gap-y-5 gap-x-14 items-center justify-between p-10 bg-gray-300 shadow-xl rounded-xl">
           <img
@@ -75,6 +76,7 @@ function Productspage() {
           </div>
         </div>
       </div>
+      <SimilarProducts Categories={dataz.categories[0].name} />
     </div>
   );
 }

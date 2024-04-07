@@ -99,11 +99,11 @@ function Homepage() {
               Search
             </Link>
           </div>
-          <div className="flex flex-row justify-evenly items-center gap-x-5  ">
+          <div className="flex flex-row justify-evenly items-center  gap-x-5  ">
             <div>
               <h1 className="text-xl">Categories</h1>
             </div>
-            <div>
+            <div className="flex flex-col">
               <Select value={category} label="Age" onChange={handleChange}>
                 <MenuItem value={"All"}>All Products</MenuItem>
                 <MenuItem value={"Laptops"}>Laptops</MenuItem>

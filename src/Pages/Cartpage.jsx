@@ -16,8 +16,8 @@ function Cartpage() {
 
   useEffect(() => {
     if (!cart) {
-      window.location.reload();
       setLoading(true); // Set loading state to true if cart is not yet available
+      window.location.reload();
     } else {
       setLoading(false); // Set loading state to false when cart is available
     }
@@ -38,7 +38,6 @@ function Cartpage() {
       </div>
     );
   }
-
   return (
     <div>
       <div className="flex flex-col container mx-auto ">
