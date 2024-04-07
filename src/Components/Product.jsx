@@ -2,11 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Product({ data }) {
+  //scroll top logic
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <div className="flex max-w-sm flex-col items-center justify-center">
         <div className="mt-5 flex flex-col p-5 gap-5 rounded-xl items-center bg-gray-300 shadow-xl">
-          <Link to={`/Productspage/:${data.id}`}>
+          <Link onClick={scrollToTop} to={`/Productspage/:${data.id}`}>
             <img
               src={data.image.url}
               alt="poster"

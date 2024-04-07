@@ -6,6 +6,7 @@ import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
+import ScrollToTopButton from "../Components/pageScroll";
 
 function Homepage() {
   const { data } = useContext(ProductsContext);
@@ -84,11 +85,9 @@ function Homepage() {
     }
   };
 
-  console.log(category);
-
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="container sticky top-0 mx-auto">
         <div className="flex flex-col gap-y-5 md:flex-row md:items-center justify-between bg-gray-300 shadow-xl p-4 rounded-lg">
           <div className="relative">
             <input
@@ -222,6 +221,7 @@ function Homepage() {
           </div>
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }
