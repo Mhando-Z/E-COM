@@ -4,8 +4,6 @@ import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import ScrollToTopButton from "../Components/pageScroll";
 
 function Homepage() {
@@ -99,17 +97,21 @@ function Homepage() {
               Search
             </Link>
           </div>
-          <div className="flex flex-row justify-evenly items-center  gap-x-5  ">
-            <div>
-              <h1 className="text-xl">Categories</h1>
-            </div>
-            <div className="flex flex-col">
-              <Select value={category} label="Age" onChange={handleChange}>
-                <MenuItem value={"All"}>All Products</MenuItem>
-                <MenuItem value={"Laptops"}>Laptops</MenuItem>
-                <MenuItem value={"Smartphones"}>Smartphones</MenuItem>
-                <MenuItem value={"Music"}>Music Devices</MenuItem>
-              </Select>
+          <div className="flex flex-row justify-center  gap-x-5  ">
+            <div className="flex flex-row items-center gap-x-5">
+              <div>
+                <h1 className="text-xl">Categories</h1>
+              </div>
+              <select
+                value={category}
+                onChange={handleChange}
+                className="bg-gray-200 bg-opacity-85 border border-gray-300 text-black text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option value={"All"}>All Products</option>
+                <option value={"Laptops"}>Laptops</option>
+                <option value={"Smartphones"}>Smartphones</option>
+                <option value={"music"}>Music Devices</option>
+              </select>
             </div>
           </div>
         </div>
@@ -149,7 +151,7 @@ function Homepage() {
       {showContent2 && (
         <div className="flex flex-col ">
           {/* PRODUCT CATEGORIZATIONS */}
-          <div className="container mx-auto mt-24">
+          <div className="container mx-auto mt-5">
             {/* SMARTPHONES CATEGORIZATIONS */}
             {category === "Smartphones" && (
               <div>
