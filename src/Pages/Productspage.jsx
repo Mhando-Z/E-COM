@@ -6,7 +6,11 @@ import CartContext from "../Context/CartsContext";
 
 function Productspage() {
   const { data } = useContext(ProductsContext);
+  const { Categories } = useContext(ProductsContext);
   const { handleAddtoCart } = useContext(CartContext);
+
+  console.log(data);
+  console.log(Categories);
   const { id } = useParams();
   if (!data || data.length === 0) {
     return (

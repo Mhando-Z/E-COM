@@ -19,19 +19,19 @@ function Navbar() {
         </div>
         <div className="md:flex hidden items-center gap-x-10 justify-between">
           <Link
-            className="text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
+            className="text-xl xl:text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
             to={"/"}
           >
             Home
           </Link>
           <Link
-            className="text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
+            className="text-xl xl:text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
             to={`/AboutUs`}
           >
             About Us
           </Link>
           <Link
-            className="text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
+            className="text-xl xl:text-2xl hover:underline duration-1000 hover:scale-y-110 hover:underline-offset-8 decoration-pink-600"
             to={`/ContactUs`}
           >
             Contact Us

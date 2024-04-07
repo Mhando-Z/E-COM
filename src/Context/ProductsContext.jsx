@@ -5,6 +5,7 @@ const ProductsContext = createContext();
 
 export function ProductsProvider({ children }) {
   const [data, setData] = useState([]);
+  const [Categories, setCatego] = useState([]);
 
   ///FFETCHING OF DATA FROM COMMERCE API LOGIC
   async function getProducts() {
@@ -13,11 +14,18 @@ export function ProductsProvider({ children }) {
       setData(data);
     } catch (error) {}
   }
+  async function getCategories() {
+    try {
+      const { data } = await commerce.categories.list();
+      setCatego(data);
+    } catch (error) {}
+  }
   useEffect(() => {
     getProducts();
+    getCategories();
   }, []);
   return (
-    <ProductsContext.Provider value={{ data }}>
+    <ProductsContext.Provider value={{ data, Categories }}>
       {children}
     </ProductsContext.Provider>
   );

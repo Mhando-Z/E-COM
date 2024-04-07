@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Product({ data }) {
   return (
     <div>
-      <div className="flex max-w-sm flex-col items-center justify-center lg:hover:scale-105 duration-700">
+      <div className="flex max-w-sm flex-col items-center justify-center">
         <div className="mt-5 flex flex-col p-5 gap-5 rounded-xl items-center bg-gray-300 shadow-xl">
           <Link to={`/Productspage/:${data.id}`}>
             <img

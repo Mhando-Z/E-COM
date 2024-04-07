@@ -12,9 +12,10 @@ export function CartProvider({ children }) {
       setCart(await commerce.cart.retrieve());
     } catch (error) {}
   }
+
   useEffect(() => {
     getCart();
-  }, []);
+  }, [cart]);
 
   //BUTTONs FUNCTIONALITY
   const handleAddtoCart = async (productId, quantity) => {
