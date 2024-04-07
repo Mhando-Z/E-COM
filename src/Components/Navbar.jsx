@@ -10,8 +10,8 @@ function Navbar() {
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="sticky top-0">
-      <div className="bg-gray-300 md:p-5 p-3 md:mb-16 mb-3 shadow-xl mt-1 flex container mx-auto items-center justify-between">
+    <div className="sticky top-0 ">
+      <div className="bg-gray-300 relative md:p-5 p-3 md:mb-16 mb-3 shadow-xl mt-1 flex container mx-auto items-center justify-between">
         <div className="">
           <Link className="" to={"/"}>
             <h1 className="uppercase md:text-2xl text-xl font-bold">E-com</h1>
@@ -56,8 +56,21 @@ function Navbar() {
             </IconButton>
           </Link>
         </div>
-        <div className="md:hidden block">
+        <div className="md:hidden flex">
           <MenuIcon />
+          {/* <div className="flex flex-col bg-slate-600 absolute right-40 bottom-96 items-center">
+            <div className="flex flex-col">
+              <Link className="text-xl text-center" to={""}>
+                Home
+              </Link>
+              <Link className="text-xl text-center" to={""}>
+                About Us
+              </Link>
+              <Link className="text-xl text-center" to={""}>
+                Contact Us
+              </Link>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>

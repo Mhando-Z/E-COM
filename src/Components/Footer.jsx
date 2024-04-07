@@ -2,6 +2,7 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -12,7 +13,13 @@ function Footer() {
         </div>
         <div className="flex flex-row items-center justify-evenly">
           <FacebookIcon />
-          <InstagramIcon />
+          <Link
+            to={
+              "https://www.instagram.com/tech_device360?igsh=N2ZveW53bXlkZG01&utm_source=qr"
+            }
+          >
+            <InstagramIcon />
+          </Link>
           <WhatsAppIcon />
         </div>
       </div>
