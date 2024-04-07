@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import CartContext from "../Context/CartsContext";
 
-function Navbar({ cartval }) {
+function Navbar() {
+  const { cart } = useContext(CartContext);
+
   return (
     <div className="sticky top-0">
       <div className="bg-gray-300 sticky top-0 md:p-5 p-3 md:mb-16 mb-3 shadow-xl mt-5 flex container mx-auto items-center justify-between">
@@ -37,7 +40,7 @@ function Navbar({ cartval }) {
         <div className="hidden lg:flex">
           <Link to={"/Cartpage"}>
             <IconButton aria-label="cart">
-              <Badge badgeContent={cartval} color="primary">
+              <Badge badgeContent={cart.total_items} color="primary">
                 <ShoppingCartIcon sx={{ fontSize: "2.2rem", mr: "7px" }} />
               </Badge>
             </IconButton>
@@ -47,7 +50,7 @@ function Navbar({ cartval }) {
         <div className="lg:hidden flex">
           <Link to={"/Cartpage"}>
             <IconButton aria-label="cart">
-              <Badge badgeContent={cartval} color="primary">
+              <Badge badgeContent={cart.total_items} color="primary">
                 <ShoppingCartIcon sx={{ fontSize: "1.7rem", mr: "7px" }} />
               </Badge>
             </IconButton>

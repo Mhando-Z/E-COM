@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import IconButton from "@mui/material/IconButton";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import CartContext from "../Context/CartsContext";
 
-function Cartpage({ cart, handleQuantityItem, handleEmpty, handleRemoveItem }) {
+function Cartpage() {
+  const { cart } = useContext(CartContext);
+  const { handleEmpty } = useContext(CartContext);
+  const { handleRemoveItem } = useContext(CartContext);
+  const { handleQuantityItem } = useContext(CartContext);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

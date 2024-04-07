@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Product from "./../Components/Product";
 import ReactPaginate from "react-paginate";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import ProductsContext from "../Context/ProductsContext";
 
-function Homepage({ data, handleCart }) {
+function Homepage() {
+  const { data } = useContext(ProductsContext);
   const [itemOffset, setItemOffset] = useState(0);
   const [value, setVal] = useState(0);
   const [showContent1, setShowContent1] = useState(true);
@@ -130,10 +132,7 @@ function Homepage({ data, handleCart }) {
                     >
                       Buy
                     </Link>
-                    <button
-                      onClick={() => handleCart(data[value].id, 1)}
-                      className="md:text-xl py-2 px-10 font-semibold bg-pink-600 text-white text-center"
-                    >
+                    <button className="md:text-xl py-2 px-10 font-semibold bg-pink-600 text-white text-center">
                       <ShoppingCartIcon
                         sx={{ fontSize: "1.4rem", mr: "7px" }}
                       />
@@ -148,10 +147,7 @@ function Homepage({ data, handleCart }) {
                     >
                       Buy
                     </Link>
-                    <button
-                      onClick={() => handleCart(data[value].id, 1)}
-                      className="text-md w-full py-2 items-center font-semibold px-10 bg-pink-600 text-white text-center"
-                    >
+                    <button className="text-md w-full py-2 items-center font-semibold px-10 bg-pink-600 text-white text-center">
                       <ShoppingCartIcon
                         sx={{ fontSize: "1.2rem", mr: "7px" }}
                       />
