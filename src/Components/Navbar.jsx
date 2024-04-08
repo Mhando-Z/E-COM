@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
@@ -89,6 +89,7 @@ function Navbar() {
           )}
         </div>
       </div>
+      <Outlet />
     </div>
   );
 }

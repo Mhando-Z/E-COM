@@ -15,15 +15,16 @@ function App() {
         <SearchProvider>
           <CartProvider>
             <BrowserRouter>
-              <Navbar cartval={0} />
               <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/Cartpage" element={<Cartpage />} />
-                <Route path="/Productspage/:id" element={<Productspage />} />
-                <Route path="/SearchResults" element={<SearchResults />} />
-                <Route path="/AboutUs" element={<Aboutuspage />} />
-                <Route path="/ContactUs" element={<Contactus />} />
-                <Route path="/Paypage/:id" element={<Paypage />} />
+                <Route path="/" element={<Navbar />}>
+                  <Route index element={<Homepage />} />
+                  <Route path="/Cartpage" element={<Cartpage />} />
+                  <Route path="/Productspage/:id" element={<Productspage />} />
+                  <Route path="/SearchResults" element={<SearchResults />} />
+                  <Route path="/AboutUs" element={<Aboutuspage />} />
+                  <Route path="/ContactUs" element={<Contactus />} />
+                  <Route path="/Paypage/:id" element={<Paypage />} />
+                </Route>
               </Routes>
               <Footer />
             </BrowserRouter>
