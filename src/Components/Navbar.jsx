@@ -13,6 +13,13 @@ function Navbar() {
   const handleMenuVisibility = () => {
     setIsMenuVisible(!isMenuVisible);
   };
+  //scroll top logic
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="sticky top-0 ">
@@ -68,13 +75,13 @@ function Navbar() {
               className={`flex flex-col bg-gray-600 p-5 bg-opacity-85 rounded-lg shadow-xl absolute right-6 left-6 top-20 z-50 items-center`}
             >
               <div className="flex flex-col text-white font-semibold gap-y-3 sm:text-2xl text-xl text-center">
-                <Link className="" to={"/"}>
+                <Link onClick={scrollToTop} className="" to={"/"}>
                   Home
                 </Link>
-                <Link className="" to={"/AboutUs"}>
+                <Link onClick={scrollToTop} className="" to={"/AboutUs"}>
                   About Us
                 </Link>
-                <Link className="" to={"/ContactUs"}>
+                <Link onClick={scrollToTop} className="" to={"/ContactUs"}>
                   Contact Us
                 </Link>
               </div>

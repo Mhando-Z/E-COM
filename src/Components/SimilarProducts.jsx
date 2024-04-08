@@ -59,7 +59,7 @@ function SimilarProducts({ Categories }) {
           {/* SMARTPHONES CATEGORIZATIONS */}
           {Categories === "Laptops" && (
             <div>
-              <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                 {groupedData.laptops.slice(0, visibleItems).map((dt, index) => {
                   return <Product key={index} val={index} data={dt} />;
                 })}
@@ -87,7 +87,7 @@ function SimilarProducts({ Categories }) {
           {/* LAPTOPS CATEGORY */}
           {Categories === "Smartphones" && (
             <div>
-              <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                 {groupedData.smartphones
                   .slice(0, visibleItems)
                   .map((dt, index) => {
@@ -117,7 +117,7 @@ function SimilarProducts({ Categories }) {
           {/* MUSIC DEVICES LOGIC */}
           {Categories === "music" && (
             <div>
-              <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                 {groupedData.music.slice(0, visibleItems).map((dt, index) => {
                   return <Product key={index} val={index} data={dt} />;
                 })}

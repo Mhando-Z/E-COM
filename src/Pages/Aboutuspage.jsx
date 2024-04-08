@@ -4,12 +4,12 @@ function Aboutuspage() {
   return (
     <div className="container mx-auto justify-center">
       <div className="flex flex-col">
-        <h1 className="text-4xl font-semibold mb-2 text-center md:text-left">
+        <h1 className="text-4xl font-semibold mb-4 text-center md:text-left">
           About Us
         </h1>
         <div className="flex flex-col gap-y-5 justify-between">
-          <div className="p-5 bg-slate-300 shadow-xl rounded-xl">
-            <h2 className="text-2xl text-justify">
+          <div className="p-5 bg-slate-300  shadow-xl rounded-xl">
+            <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
               Welcome to Naima's E-COM, your one-stop online shop for affordable
               goodies straight from China! At Naima, we believe that quality
               products shouldn't break the bank. That's why we've scoured China
@@ -18,7 +18,7 @@ function Aboutuspage() {
             </h2>
           </div>
           <div className="p-5 bg-slate-300 shadow-xl rounded-xl">
-            <h2 className="text-2xl text-justify ">
+            <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter ">
               Our mission is simple: to make shopping for the things you love
               easy and accessible. Whether you're after trendy fashion finds,
               cutting-edge gadgets, or practical everyday essentials, we've got
@@ -29,7 +29,7 @@ function Aboutuspage() {
             </h2>
           </div>
           <div className="p-5 bg-slate-300 shadow-xl rounded-xl ">
-            <h2 className="text-2xl text-justify">
+            <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
               Our user-friendly website makes browsing and ordering a breeze, so
               you can spend less time shopping and more time enjoying your new
               purchases. Join the Naima family today and experience the joy of

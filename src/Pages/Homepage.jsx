@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
+import SearchContext from "../Context/SearchContext";
 
 function Homepage() {
   const { data } = useContext(ProductsContext);
+  const { handleSearch } = useContext(SearchContext);
   const [itemOffset, setItemOffset] = useState(0);
   const [showContent1, setShowContent1] = useState(true);
   const [showContent2, setShowContent2] = useState(false);
   const [groupedData, setGroup] = useState([]);
   const [category, setCategory] = useState(" ");
   const [visibleItems, setVisible] = useState(10);
+  let itemsPerPage = 15;
 
   const loadMore = () => {
     setVisible((prevVisible) => prevVisible + 5);
@@ -26,8 +29,6 @@ function Homepage() {
     setShowContent1(!showContent1);
     setShowContent2(!showContent2);
   };
-
-  let itemsPerPage = 15;
 
   //PAGINATION LOGIC
   const endOffset = itemOffset + itemsPerPage;
@@ -98,6 +99,7 @@ function Homepage() {
           <div className="relative">
             <input
               type="search"
+              onChange={(e) => handleSearch(e)}
               className="relative w-full focus:md:w-[400px] transition ease-in-out duration-700 bg-gray-200 bg-opacity-85  rounded-lg p-1"
             />
             <Link className="absolute py-1 px-4 bg-pink-500 text-white rounded-lg font-semibold right-0">
@@ -126,7 +128,7 @@ function Homepage() {
       </div>
       {showContent1 && (
         <div className="container mx-auto">
-          <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+          <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
             {datax.map((dt, index) => {
               return (
                 <Product
@@ -163,7 +165,7 @@ function Homepage() {
             {/* SMARTPHONES CATEGORIZATIONS */}
             {category === "music" && (
               <div>
-                <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                   {groupedData.music.slice(0, visibleItems).map((dt, index) => {
                     return (
                       <Product
@@ -198,7 +200,7 @@ function Homepage() {
             {/* LAPTOPS CATEGORY */}
             {category === "Laptops" && (
               <div>
-                <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                   {groupedData.laptops
                     .slice(0, visibleItems)
                     .map((dt, index) => {
@@ -235,7 +237,7 @@ function Homepage() {
             {/* MUSIC DEVICES CATEGORY */}
             {category === "Smartphones" && (
               <div>
-                <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                   {groupedData.smartphones
                     .slice(0, visibleItems)
                     .map((dt, index) => {
