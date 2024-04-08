@@ -13,6 +13,14 @@ function Homepage() {
   const [showContent2, setShowContent2] = useState(false);
   const [groupedData, setGroup] = useState([]);
   const [category, setCategory] = useState(" ");
+  const [visibleItems, setVisible] = useState(10);
+
+  const loadMore = () => {
+    setVisible((prevVisible) => prevVisible + 5);
+  };
+  const loadLess = () => {
+    setVisible((prevVisible) => prevVisible - 5);
+  };
 
   const handlePage = () => {
     setShowContent1(!showContent1);
@@ -153,10 +161,10 @@ function Homepage() {
           {/* PRODUCT CATEGORIZATIONS */}
           <div className="container mx-auto mt-5">
             {/* SMARTPHONES CATEGORIZATIONS */}
-            {category === "Smartphones" && (
+            {category === "music" && (
               <div>
                 <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                  {groupedData.smartphones.map((dt, index) => {
+                  {groupedData.music.slice(0, visibleItems).map((dt, index) => {
                     return (
                       <Product
                         key={index}
@@ -168,20 +176,21 @@ function Homepage() {
                   })}
                 </div>
                 <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
-                  <ReactPaginate
-                    className="text-xl flex items-center justify-evenly gap-x-3"
-                    pageClassName=" bg-gray-200 px-2"
-                    activeClassName="bg-pink-600 text-white"
-                    previousClassName=" bg-gray-200 px-2"
-                    nextClassName="bg-gray-200 px-2"
-                    breakLabel="..."
-                    nextLabel="Next"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={5}
-                    pageCount={pageCount}
-                    previousLabel="Prev"
-                    renderOnZeroPageCount={null}
-                  />
+                  {visibleItems < groupedData.music.length ? (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadMore}
+                    >
+                      Load More
+                    </button>
+                  ) : (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadLess}
+                    >
+                      Load Less
+                    </button>
+                  )}
                 </div>
               </div>
             )}
@@ -190,36 +199,75 @@ function Homepage() {
             {category === "Laptops" && (
               <div>
                 <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                  {groupedData.laptops.map((dt, index) => {
-                    return (
-                      <Product
-                        key={index}
-                        onPageinfo={handlePage}
-                        val={index}
-                        data={dt}
-                      />
-                    );
-                  })}
+                  {groupedData.laptops
+                    .slice(0, visibleItems)
+                    .map((dt, index) => {
+                      return (
+                        <Product
+                          key={index}
+                          onPageinfo={handlePage}
+                          val={index}
+                          data={dt}
+                        />
+                      );
+                    })}
                 </div>
                 <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
-                  <ReactPaginate
-                    className="text-xl flex items-center justify-evenly gap-x-3"
-                    pageClassName=" bg-gray-200 px-2"
-                    activeClassName="bg-pink-600 text-white"
-                    previousClassName=" bg-gray-200 px-2"
-                    nextClassName="bg-gray-200 px-2"
-                    breakLabel="..."
-                    nextLabel="Next"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={5}
-                    pageCount={pageCount}
-                    previousLabel="Prev"
-                    renderOnZeroPageCount={null}
-                  />
+                  {visibleItems < groupedData.laptops.length ? (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadMore}
+                    >
+                      Load More
+                    </button>
+                  ) : (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadLess}
+                    >
+                      Load Less
+                    </button>
+                  )}
                 </div>
               </div>
             )}
             {/* LAPTOPS CATEGORY */}
+            {/* MUSIC DEVICES CATEGORY */}
+            {category === "Smartphones" && (
+              <div>
+                <div className="grid grid-cols-2 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                  {groupedData.smartphones
+                    .slice(0, visibleItems)
+                    .map((dt, index) => {
+                      return (
+                        <Product
+                          key={index}
+                          onPageinfo={handlePage}
+                          val={index}
+                          data={dt}
+                        />
+                      );
+                    })}
+                </div>
+                <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
+                  {visibleItems < groupedData.smartphones.length ? (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadMore}
+                    >
+                      Load More
+                    </button>
+                  ) : (
+                    <button
+                      className="text-xl py-1 px-10 bg-pink-500 text-white font-semibold rounded-lg"
+                      onClick={loadLess}
+                    >
+                      Load Less
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}

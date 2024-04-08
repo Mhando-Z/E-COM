@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
@@ -8,6 +8,11 @@ import CartContext from "../Context/CartsContext";
 
 function Navbar() {
   const { cart } = useContext(CartContext);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  const handleMenuVisibility = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
 
   return (
     <div className="sticky top-0 ">
@@ -56,21 +61,25 @@ function Navbar() {
             </IconButton>
           </Link>
         </div>
-        <div className="md:hidden flex">
-          <MenuIcon />
-          {/* <div className="flex flex-col bg-slate-600 absolute right-40 bottom-96 items-center">
-            <div className="flex flex-col">
-              <Link className="text-xl text-center" to={""}>
-                Home
-              </Link>
-              <Link className="text-xl text-center" to={""}>
-                About Us
-              </Link>
-              <Link className="text-xl text-center" to={""}>
-                Contact Us
-              </Link>
+        <div onClick={handleMenuVisibility} className="md:hidden  flex">
+          <MenuIcon className="" />
+          {isMenuVisible && (
+            <div
+              className={`flex flex-col bg-gray-600 p-5 bg-opacity-85 rounded-lg shadow-xl absolute right-6 left-6 top-20 z-50 items-center`}
+            >
+              <div className="flex flex-col text-white font-semibold gap-y-3 sm:text-2xl text-xl text-center">
+                <Link className="" to={"/"}>
+                  Home
+                </Link>
+                <Link className="" to={"/AboutUs"}>
+                  About Us
+                </Link>
+                <Link className="" to={"/ContactUs"}>
+                  Contact Us
+                </Link>
+              </div>
             </div>
-          </div> */}
+          )}
         </div>
       </div>
     </div>
