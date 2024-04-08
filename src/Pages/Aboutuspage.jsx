@@ -4,11 +4,14 @@ function Aboutuspage() {
   return (
     <div className="container mx-auto justify-center">
       <div className="flex flex-col">
-        <h1 className="text-4xl font-semibold mb-4 text-center md:text-left">
+        <h1 className="text-4xl p-4 font-semibold mb-4 text-center md:text-left">
           About Us
         </h1>
         <div className="flex flex-col gap-y-5 justify-between">
-          <div className="p-5 bg-slate-300  shadow-xl rounded-xl">
+          <div className="p-5 bg-slate-300   shadow-md rounded-xl">
+            <h1 className="md:text-3xl mb-2 text-2xl font-semibold uppercase bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
+              Introduction
+            </h1>
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
               Welcome to Naima's E-COM, your one-stop online shop for affordable
               goodies straight from China! At Naima, we believe that quality
@@ -17,7 +20,10 @@ function Aboutuspage() {
               your wallet feeling light.
             </h2>
           </div>
-          <div className="p-5 bg-slate-300 shadow-xl rounded-xl">
+          <div className="p-5 bg-slate-300 shadow-md rounded-xl">
+            <h1 className="md:text-3xl text-2xl mb-2 uppercase font-semibold bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
+              Mission
+            </h1>
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter ">
               Our mission is simple: to make shopping for the things you love
               easy and accessible. Whether you're after trendy fashion finds,
@@ -28,7 +34,7 @@ function Aboutuspage() {
               you're getting great value without compromising on quality.
             </h2>
           </div>
-          <div className="p-5 bg-slate-300 shadow-xl rounded-xl ">
+          <div className="p-5 bg-slate-300 shadow-md rounded-xl ">
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
               Our user-friendly website makes browsing and ordering a breeze, so
               you can spend less time shopping and more time enjoying your new

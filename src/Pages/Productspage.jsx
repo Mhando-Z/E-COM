@@ -17,7 +17,7 @@ function Productspage() {
       </div>
     );
   }
-  const dataz = data.find((dt) => dt.id === id.substring(1));
+  const dataz = data.find((dt) => dt.id === id);
   return (
     <div className="flex flex-col justify-center">
       <div className="flex items-center justify-center">

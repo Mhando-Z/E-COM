@@ -1,23 +1,23 @@
 import React, { useContext, useState } from "react";
 import ProductsContext from "../Context/ProductsContext";
 import Product from "../Components/Product";
-import { useParams } from "react-router-dom";
-//import SearchIcon from "@mui/icons-material/Search";
+import { Link, useParams } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
 
-const SearchResults = () => {
+const SearchResult = () => {
   const { id } = useParams();
   const { data } = useContext(ProductsContext);
   const [visibleItems, setVisible] = useState(10);
-  //const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");
 
   const newData = [...data];
   const dataFilterd = newData.filter((dt) => {
     return dt.name.toLowerCase().includes(id);
   });
   //Search Function
-  // const handleSearch = (e) => {
-  //   setQuery(e.target.value.toLocaleLowerCase());
-  // };
+  const handleSearch = (e) => {
+    setQuery(e.target.value.toLocaleLowerCase());
+  };
 
   //LOADMORE BUTTONS LOGIC
   const loadMore = () => {
@@ -64,23 +64,23 @@ const SearchResults = () => {
           </div>
         </div>
       )}
-      {/* <div className="relative container mx-auto">
+      <div className="relative container mx-auto">
         <input
           type="search"
           onChange={(e) => handleSearch(e)}
-          className="relative w-full bg-gray-200 bg-opacity-85  rounded-lg p-1"
+          className="relative w-full  bg-gray-200 bg-opacity-85  rounded-lg p-1"
         />
         <Link
-          to={`SearchResult/${query}`}
+          to={`SearchResults/${query}`}
           onClick={() => setQuery(() => " ")}
           className="absolute py-1 px-4 bg-pink-500 text-white rounded-lg font-semibold right-0"
         >
           <SearchIcon />
           Search
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default SearchResults;
+export default SearchResult;

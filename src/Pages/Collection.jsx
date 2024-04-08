@@ -5,3 +5,4 @@ export { default as Homepage } from "./Homepage";
 export { default as Cartpage } from "./Cartpage";
 export { default as Paypage } from "./Paypage";
 export { default as SearchResults } from "./SearchResult";
+export { default as SearchResult } from "./SearchResults";

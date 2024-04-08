@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
-import SearchContext from "../Context/SearchContext";
 
 function Homepage() {
   const { data } = useContext(ProductsContext);
-  const { handleSearch } = useContext(SearchContext);
+  const [query, setQuery] = useState("");
   const [itemOffset, setItemOffset] = useState(0);
   const [showContent1, setShowContent1] = useState(true);
   const [showContent2, setShowContent2] = useState(false);
@@ -17,6 +16,11 @@ function Homepage() {
   const [category, setCategory] = useState(" ");
   const [visibleItems, setVisible] = useState(10);
   let itemsPerPage = 15;
+
+  //Search Function
+  const handleSearch = (e) => {
+    setQuery(e.target.value.toLocaleLowerCase());
+  };
 
   const loadMore = () => {
     setVisible((prevVisible) => prevVisible + 5);
@@ -102,7 +106,11 @@ function Homepage() {
               onChange={(e) => handleSearch(e)}
               className="relative w-full focus:md:w-[400px] transition ease-in-out duration-700 bg-gray-200 bg-opacity-85  rounded-lg p-1"
             />
-            <Link className="absolute py-1 px-4 bg-pink-500 text-white rounded-lg font-semibold right-0">
+            <Link
+              to={`SearchResults/${query}`}
+              onClick={() => setQuery(() => " ")}
+              className="absolute py-1 px-4 bg-pink-500 text-white rounded-lg font-semibold right-0"
+            >
               <SearchIcon />
               Search
             </Link>
