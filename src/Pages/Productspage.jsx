@@ -17,6 +17,13 @@ function Productspage() {
       </div>
     );
   }
+  //scroll top logic
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const dataz = data.find((dt) => dt.id === id);
   return (
     <div className="flex flex-col justify-center">
@@ -43,6 +50,7 @@ function Productspage() {
               </h1>
               <div className="lg:flex hidden flex-col mt-3 lg:mt-10 lg:flex-row gap-x-24 gap-y-5 items-center justify-center">
                 <Link
+                  onClick={scrollToTop}
                   className="md:text-xl py-2 font-semibold px-10 bg-pink-600 text-white text-center"
                   to={`/Paypage/${dataz.id}`}
                 >
@@ -59,6 +67,7 @@ function Productspage() {
               {/* Small screen buttons */}
               <div className="lg:hidden flex flex-col mt-3 gap-y-5 items-center justify-center">
                 <Link
+                  onClick={scrollToTop}
                   className="text-md w-full py-2 font-semibold px-10 bg-pink-600 text-white text-center"
                   to={`/Paypage/${dataz.id}`}
                 >
