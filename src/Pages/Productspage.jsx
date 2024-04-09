@@ -60,7 +60,7 @@ function Productspage() {
               <div className="lg:hidden flex flex-col mt-3 gap-y-5 items-center justify-center">
                 <Link
                   className="text-md w-full py-2 font-semibold px-10 bg-pink-600 text-white text-center"
-                  to={`/Paypage/${data.id}`}
+                  to={`/Paypage/${dataz.id}`}
                 >
                   Buy
                 </Link>

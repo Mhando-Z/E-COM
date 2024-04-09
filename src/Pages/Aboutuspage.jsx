@@ -8,7 +8,7 @@ function Aboutuspage() {
           About Us
         </h1>
         <div className="flex flex-col gap-y-5 justify-between">
-          <div className="p-5 bg-slate-300   shadow-md rounded-xl">
+          <div className="p-5 bg-slate-300 shadow-md rounded-xl">
             <h1 className="md:text-3xl mb-2 text-2xl font-semibold uppercase bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
               Introduction
             </h1>

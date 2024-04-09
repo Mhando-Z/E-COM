@@ -9,7 +9,9 @@ function Footer() {
     <div className=" bg-gray-400 bg-opacity-35  p-10">
       <div className="container mx-auto flex md:flex-row gap-y-5 flex-col justify-between">
         <div className="text-center md:text-left">
-          <h1 className="text-lg font-semibold">E-COM</h1>
+          <Link to={"/"}>
+            <h1 className="text-lg font-semibold">E-COM</h1>
+          </Link>
         </div>
         <div className="flex flex-row items-center justify-evenly">
           <FacebookIcon />

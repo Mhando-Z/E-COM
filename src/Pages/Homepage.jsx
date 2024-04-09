@@ -104,7 +104,7 @@ function Homepage() {
             <input
               type="search"
               onChange={(e) => handleSearch(e)}
-              className="relative w-full focus:md:w-[400px] transition ease-in-out duration-700 bg-gray-200 bg-opacity-85  rounded-lg p-1"
+              className="relative w-full text-start focus:md:w-[400px] outline-none focus:outline-none ring-2 ring-pink-500 transition ease-in-out duration-700 bg-gray-200 bg-opacity-85 rounded-lg p-1"
             />
             <Link
               to={`SearchResults/${query}`}
