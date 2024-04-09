@@ -37,7 +37,7 @@ function Paypage() {
 
   return (
     <div className="bg-gray-300 shadow-xl rounded-xl container mx-auto">
-      <div className=" flex md:flex-row p-10 flex-col gap-y-5 justify-center space-x-10 md:justify-evenly">
+      <div className=" flex md:flex-row p-10 flex-col gap-y-5 justify-center md:space-x-10 md:justify-evenly">
         <div className="flex flex-col gap-y-5 max-w-md">
           {/* Address */}
           <div className="max-w-md">
@@ -206,7 +206,7 @@ function Paypage() {
               <h1 className="text-xl font-semibold">
                 Total-price: {(datax.price.raw + 25000).toLocaleString()} TZS
               </h1>
-              <Link className="py-2 mt-4 font-semibold text-xl px-8 rounded-lg text-center bg-pink-500 text-white font-extralight">
+              <Link className="py-2 mt-4 font-semibold text-xl px-8 rounded-lg text-center bg-pink-500 text-white">
                 Buy
               </Link>
             </div>
