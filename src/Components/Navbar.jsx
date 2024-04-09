@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <div className="sticky top-0 ">
-      <div className="bg-gray-300 relative md:p-2 p-1 md:mb-16 mb-3 shadow-xl mt-1 flex container mx-auto items-center justify-between">
+      <div className="bg-gray-300 relative md:p-2  md:mb-16 mb-3 shadow-xl py-2 mt-2 flex container mx-auto items-center justify-between">
         <div className="">
           <Link className="" to={"/"}>
             <h1 className="uppercase md:text-2xl text-xl font-bold">E-com</h1>
