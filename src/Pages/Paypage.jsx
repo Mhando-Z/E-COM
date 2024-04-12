@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Fade } from "@mui/material";
 
 ///DRAWER COMPONENT
 
@@ -191,7 +192,9 @@ function Paypage() {
           </div>
           {/* item display */}
           <div className="flex gap-2 md:flex-row items-center flex-col">
-            <img src={datax.image.url} alt="postermage" className="h-36" />
+            <Fade in={true} timeout={1800}>
+              <img src={datax.image.url} alt="postermage" className="h-36" />
+            </Fade>
             <div className="flex flex-col">
               <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <h1 className="text-2xl font-semibold">{datax.name}</h1>

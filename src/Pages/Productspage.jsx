@@ -4,6 +4,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ProductsContext from "../Context/ProductsContext";
 import CartContext from "../Context/CartsContext";
 import SimilarProducts from "../Components/SimilarProducts";
+import { Fade } from "@mui/material";
 
 function Productspage() {
   const { data } = useContext(ProductsContext);
@@ -39,11 +40,13 @@ function Productspage() {
           <div className="flex flex-col items-center justify-center">
             {showContent1 && (
               <div className="flex flex-col items-center justify-center gap-y-4">
-                <img
-                  src={dataz.image.url}
-                  alt="phone"
-                  className="max-w-screen h-auto bg-gray-200 shadow-md rounded-xl"
-                />
+                <Fade in={true} timeout={1800}>
+                  <img
+                    src={dataz.image.url}
+                    alt="phone"
+                    className="max-w-screen h-auto bg-gray-200 shadow-md rounded-xl"
+                  />
+                </Fade>
 
                 <Link
                   onClick={handleContentView}
@@ -55,24 +58,28 @@ function Productspage() {
             )}
             {showContent && (
               <div className="flex flex-col items-center justify-center gap-y-4">
-                <iframe
-                  title={dataz.name}
-                  width="500"
-                  height="500"
-                  src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="sm:hidden size-80 shadow-lg rounded-xl"
-                ></iframe>
-                <iframe
-                  title={dataz.name}
-                  width="500"
-                  height="500"
-                  src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="hidden sm:flex shadow-lg rounded-xl"
-                ></iframe>
+                <Fade in={true} timeout={1800}>
+                  <iframe
+                    title={dataz.name}
+                    width="500"
+                    height="500"
+                    src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
+                    frameBorder="0"
+                    allowFullScreen
+                    className="sm:hidden size-80 shadow-lg rounded-xl"
+                  ></iframe>
+                </Fade>
+                <Fade in={true} timeout={1800}>
+                  <iframe
+                    title={dataz.name}
+                    width="500"
+                    height="500"
+                    src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
+                    frameBorder="0"
+                    allowFullScreen
+                    className="hidden sm:flex shadow-lg rounded-xl"
+                  ></iframe>
+                </Fade>
                 <Link
                   onClick={handleContentView}
                   className="py-2 px-8 bg-pink-500 text-white font-semibold rounded-md"

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
+import Grow from "@mui/material/Grow";
 
 function Homepage() {
   const { data } = useContext(ProductsContext);
@@ -137,23 +138,25 @@ function Homepage() {
       </div>
       {showContent1 && (
         <div className="container mx-auto">
-          <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-            {datax.map((dt, index) => {
-              return (
-                <Product
-                  key={index}
-                  onPageinfo={handlePage}
-                  val={index}
-                  data={dt}
-                />
-              );
-            })}
-          </div>
+          <Grow in={true} timeout={1800}>
+            <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+              {datax.map((dt, index) => {
+                return (
+                  <Product
+                    key={index}
+                    onPageinfo={handlePage}
+                    val={index}
+                    data={dt}
+                  />
+                );
+              })}
+            </div>
+          </Grow>
           <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
             <ReactPaginate
               className="text-xl flex items-center justify-evenly gap-x-3"
               pageClassName=" bg-gray-200 px-2"
-              activeClassName="bg-pink-600 text-white"
+              activeClassName="bg-pink-500 text-white"
               previousClassName=" bg-gray-200 px-2"
               nextClassName="bg-gray-200 px-2"
               breakLabel="..."
@@ -174,18 +177,22 @@ function Homepage() {
             {/* SMARTPHONES CATEGORIZATIONS */}
             {category === "music" && (
               <div>
-                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                  {groupedData.music.slice(0, visibleItems).map((dt, index) => {
-                    return (
-                      <Product
-                        key={index}
-                        onPageinfo={handlePage}
-                        val={index}
-                        data={dt}
-                      />
-                    );
-                  })}
-                </div>
+                <Grow in={true} timeout={1800}>
+                  <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                    {groupedData.music
+                      .slice(0, visibleItems)
+                      .map((dt, index) => {
+                        return (
+                          <Product
+                            key={index}
+                            onPageinfo={handlePage}
+                            val={index}
+                            data={dt}
+                          />
+                        );
+                      })}
+                  </div>
+                </Grow>
                 <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                   {visibleItems < groupedData.music.length ? (
                     <button
@@ -209,20 +216,22 @@ function Homepage() {
             {/* LAPTOPS CATEGORY */}
             {category === "Laptops" && (
               <div>
-                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                  {groupedData.laptops
-                    .slice(0, visibleItems)
-                    .map((dt, index) => {
-                      return (
-                        <Product
-                          key={index}
-                          onPageinfo={handlePage}
-                          val={index}
-                          data={dt}
-                        />
-                      );
-                    })}
-                </div>
+                <Grow in={true} timeout={1800}>
+                  <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                    {groupedData.laptops
+                      .slice(0, visibleItems)
+                      .map((dt, index) => {
+                        return (
+                          <Product
+                            key={index}
+                            onPageinfo={handlePage}
+                            val={index}
+                            data={dt}
+                          />
+                        );
+                      })}
+                  </div>
+                </Grow>
                 <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                   {visibleItems < groupedData.laptops.length ? (
                     <button
@@ -246,20 +255,22 @@ function Homepage() {
             {/* MUSIC DEVICES CATEGORY */}
             {category === "Smartphones" && (
               <div>
-                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                  {groupedData.smartphones
-                    .slice(0, visibleItems)
-                    .map((dt, index) => {
-                      return (
-                        <Product
-                          key={index}
-                          onPageinfo={handlePage}
-                          val={index}
-                          data={dt}
-                        />
-                      );
-                    })}
-                </div>
+                <Grow in={true} timeout={1800}>
+                  <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                    {groupedData.smartphones
+                      .slice(0, visibleItems)
+                      .map((dt, index) => {
+                        return (
+                          <Product
+                            key={index}
+                            onPageinfo={handlePage}
+                            val={index}
+                            data={dt}
+                          />
+                        );
+                      })}
+                  </div>
+                </Grow>
                 <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                   {visibleItems < groupedData.smartphones.length ? (
                     <button

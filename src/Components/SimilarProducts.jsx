@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import ProductsContext from "../Context/ProductsContext";
 import Product from "./Product";
+import { Fade } from "@mui/material";
 
 function SimilarProducts({ Categories }) {
   const { data } = useContext(ProductsContext);
@@ -59,11 +60,15 @@ function SimilarProducts({ Categories }) {
           {/* SMARTPHONES CATEGORIZATIONS */}
           {Categories === "Laptops" && (
             <div>
-              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                {groupedData.laptops.slice(0, visibleItems).map((dt, index) => {
-                  return <Product key={index} val={index} data={dt} />;
-                })}
-              </div>
+              <Fade in={true} timeout={1800}>
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                  {groupedData.laptops
+                    .slice(0, visibleItems)
+                    .map((dt, index) => {
+                      return <Product key={index} val={index} data={dt} />;
+                    })}
+                </div>
+              </Fade>
               <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                 {visibleItems < groupedData.laptops.length ? (
                   <button
@@ -87,13 +92,15 @@ function SimilarProducts({ Categories }) {
           {/* LAPTOPS CATEGORY */}
           {Categories === "Smartphones" && (
             <div>
-              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                {groupedData.smartphones
-                  .slice(0, visibleItems)
-                  .map((dt, index) => {
-                    return <Product key={index} val={index} data={dt} />;
-                  })}
-              </div>
+              <Fade in={true} timeout={1800}>
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                  {groupedData.smartphones
+                    .slice(0, visibleItems)
+                    .map((dt, index) => {
+                      return <Product key={index} val={index} data={dt} />;
+                    })}
+                </div>
+              </Fade>
               <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                 {visibleItems < groupedData.smartphones.length ? (
                   <button
@@ -117,11 +124,13 @@ function SimilarProducts({ Categories }) {
           {/* MUSIC DEVICES LOGIC */}
           {Categories === "music" && (
             <div>
-              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
-                {groupedData.music.slice(0, visibleItems).map((dt, index) => {
-                  return <Product key={index} val={index} data={dt} />;
-                })}
-              </div>
+              <Fade in={true} timeout={1800}>
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                  {groupedData.music.slice(0, visibleItems).map((dt, index) => {
+                    return <Product key={index} val={index} data={dt} />;
+                  })}
+                </div>
+              </Fade>
               <div className="mt-10  text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
                 {visibleItems < groupedData.music.length ? (
                   <button
