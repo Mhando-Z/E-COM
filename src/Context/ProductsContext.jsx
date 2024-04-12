@@ -8,9 +8,10 @@ export function ProductsProvider({ children }) {
   const [Categories, setCatego] = useState([]);
 
   ///FFETCHING OF DATA FROM COMMERCE API LOGIC
+
   async function getProducts() {
     try {
-      const { data } = await commerce.products.list();
+      const { data } = await commerce.products.list({ limit: 199 });
       setData(data);
     } catch (error) {}
   }
