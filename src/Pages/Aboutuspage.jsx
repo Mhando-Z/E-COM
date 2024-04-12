@@ -13,11 +13,11 @@ function Aboutuspage() {
               Introduction
             </h1>
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
-              Welcome to Naima's E-COM, your one-stop online shop for affordable
-              goodies straight from China! At Naima, we believe that quality
-              products shouldn't break the bank. That's why we've scoured China
-              to bring you an exciting range of items at prices that won't leave
-              your wallet feeling light.
+              Welcome to E-COM, your one-stop online shop for affordable goodies
+              straight from China! At E-COM, we believe that quality products
+              shouldn't break the bank. That's why we've scoured China to bring
+              you an exciting range of items at prices that won't leave your
+              wallet feeling light.
             </h2>
           </div>
           <div className="p-5 bg-slate-300 shadow-md rounded-xl">
