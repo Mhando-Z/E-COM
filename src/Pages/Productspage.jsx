@@ -60,8 +60,8 @@ function Productspage() {
                   width="500"
                   height="500"
                   src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
-                  frameborder="0"
-                  allowfullscreen
+                  frameBorder="0"
+                  allowfullScreen
                   className="sm:hidden size-80 shadow-lg rounded-xl"
                 ></iframe>
                 <iframe
@@ -69,8 +69,8 @@ function Productspage() {
                   width="500"
                   height="500"
                   src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
-                  frameborder="0"
-                  allowfullscreen
+                  frameBorder="0"
+                  allowfullScreen
                   className="hidden sm:flex shadow-lg rounded-xl"
                 ></iframe>
                 <Link
