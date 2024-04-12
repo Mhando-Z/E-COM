@@ -99,14 +99,14 @@ function Productspage() {
               <div className="lg:flex hidden flex-col mt-3 lg:mt-10 lg:flex-row gap-x-24 gap-y-5 items-center justify-center">
                 <Link
                   onClick={scrollToTop}
-                  className="md:text-xl py-2 font-semibold px-10 bg-pink-600 text-white text-center"
+                  className="md:text-xl py-2 font-semibold px-10 bg-pink-500 text-white text-center"
                   to={`/Paypage/${dataz.id}`}
                 >
                   Buy
                 </Link>
                 <button
                   onClick={() => handleAddtoCart(dataz.id, 1)}
-                  className="md:text-xl py-2 px-10 font-semibold bg-pink-600 text-white text-center"
+                  className="md:text-xl py-2 px-10 font-semibold bg-pink-500 text-white text-center"
                 >
                   <ShoppingCartIcon sx={{ fontSize: "1.4rem", mr: "7px" }} />
                   Add Cart
