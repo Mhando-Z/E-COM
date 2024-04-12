@@ -15,7 +15,7 @@ function Homepage() {
   const [groupedData, setGroup] = useState([]);
   const [category, setCategory] = useState(" ");
   const [visibleItems, setVisible] = useState(10);
-  let itemsPerPage = 15;
+  let itemsPerPage = 20;
 
   //Search Function
   const handleSearch = (e) => {

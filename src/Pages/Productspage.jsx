@@ -29,18 +29,41 @@ function Productspage() {
     <div className="flex flex-col justify-center">
       <div className="flex items-center justify-center">
         <div className="flex flex-col lg:flex-row gap-y-5 gap-x-14 items-center justify-between p-10 bg-gray-300 shadow-xl rounded-xl">
-          <img
-            src={dataz.image.url}
-            alt="phone"
-            className="max-w-screen h-auto bg-gray-200 shadow-md rounded-xl"
-          />
+          {dataz.sku === null ? (
+            <img
+              src={dataz.image.url}
+              alt="phone"
+              className="max-w-screen h-auto bg-gray-200 shadow-md rounded-xl"
+            />
+          ) : (
+            <div>
+              <iframe
+                title={dataz.name}
+                width="500"
+                height="500"
+                src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
+                frameborder="0"
+                allowfullscreen
+                className="sm:hidden size-80 shadow-md rounded-xl"
+              ></iframe>
+              <iframe
+                title={dataz.name}
+                width="500"
+                height="500"
+                src={`https://embed.studio.binkies3d.com/live3d/${dataz.sku}`}
+                frameborder="0"
+                allowfullscreen
+                className="hidden sm:flex shadow-md rounded-xl"
+              ></iframe>
+            </div>
+          )}
           <div className="flex flex-col items-center justify-center gap-1">
             <div className="mb-5">
               <h1 className="lg:text-6xl max-w-lg text-4xl mb-5 text-center">
                 {dataz.name}
               </h1>
               <h1 className="text-xl max-w-lg text-justify">
-                {dataz.description}
+                {dataz.description.replace(/<\/?[^>]+(>|$)/g, "")}
               </h1>
             </div>
 
