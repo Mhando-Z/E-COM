@@ -50,7 +50,7 @@ function Productspage() {
 
                 <Link
                   onClick={handleContentView}
-                  className="py-2 px-8 bg-pink-500 text-white font-semibold rounded-md"
+                  className="py-2 px-8 bg-gray-300 shadow-xl ring-2 ring-pink-600 font-semibold rounded-md"
                 >
                   3D model
                 </Link>
@@ -82,7 +82,7 @@ function Productspage() {
                 </Fade>
                 <Link
                   onClick={handleContentView}
-                  className="py-2 px-8 bg-pink-500 text-white font-semibold rounded-md"
+                  className="py-2 px-8 bg-gray-300 shadow-xl ring-2 ring-pink-600 font-semibold rounded-md"
                 >
                   Picture
                 </Link>
