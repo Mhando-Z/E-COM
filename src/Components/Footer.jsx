@@ -22,7 +22,9 @@ function Footer() {
           >
             <InstagramIcon />
           </Link>
-          <WhatsAppIcon />
+          <Link to={"https://wa.me/message/RQ4LDCEJOO2EK1"}>
+            <WhatsAppIcon />
+          </Link>
         </div>
       </div>
     </div>

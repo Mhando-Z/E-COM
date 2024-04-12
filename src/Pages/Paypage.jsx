@@ -4,6 +4,7 @@ import Slide from "@mui/material/Slide";
 import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 ///DRAWER COMPONENT
 
@@ -177,7 +178,14 @@ function Paypage() {
             <h1 className="text-2xl font-semibold">Choose Payment methode</h1>
             <div className="mt-2">
               <p className="text-lg ring-2 ring-red-600 rounded-xl p-3 text-red-700 ">
-                Sorry at the moment we havent integrated payment method{" "}
+                Sorry at the moment we havent integrated payment method,
+                check-us via Whatssap by clicking the whatssap icon
+                <Link
+                  className="text-xl text-green-600"
+                  to={"https://wa.me/message/RQ4LDCEJOO2EK1"}
+                >
+                  <WhatsAppIcon sx={{ fontFamily: "2.5rem", ml: "4px" }} />
+                </Link>
               </p>
             </div>
           </div>
@@ -208,7 +216,10 @@ function Paypage() {
               <h1 className="text-xl font-semibold">
                 Total-price: {(datax.price.raw + 25000).toLocaleString()} TZS
               </h1>
-              <Link className="py-2 mt-4 font-semibold text-xl px-8 rounded-lg text-center bg-pink-500 text-white">
+              <Link
+                to={"https://wa.me/message/RQ4LDCEJOO2EK1"}
+                className="py-2 mt-4 font-semibold text-xl px-8 rounded-lg text-center bg-pink-500 text-white"
+              >
                 Buy
               </Link>
             </div>
