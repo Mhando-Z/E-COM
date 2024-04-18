@@ -80,7 +80,7 @@ function Cartpage() {
                   <td className="text-center">
                     <Link
                       onClick={() => handleRemoveItem(data.id)}
-                      className=" rounded-lg text-white font-semibold text-lg md:text-2xl"
+                      className=" rounded-lg  text-white font-semibold text-lg md:text-2xl"
                     >
                       <HighlightOffIcon
                         sx={{
@@ -100,7 +100,7 @@ function Cartpage() {
           </tbody>
         </table>
 
-        <div className=" mt-10 flex shadow-lg py-3 flex-row justify-between items-center">
+        <div className=" mt-10 flex dark:text-gray-200 dark:bg-gray-700 shadow-lg py-3 flex-row justify-between items-center">
           <h1 className="md:text-2xl text-lg text-center font-semibold">
             Total Items: {cart.total_items}
           </h1>

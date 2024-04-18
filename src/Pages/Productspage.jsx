@@ -34,9 +34,9 @@ function Productspage() {
   };
   const dataz = data.find((dt) => dt.id === id);
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center dark:text-gray-200">
       <div className="flex items-center justify-center">
-        <div className="flex flex-col lg:flex-row gap-y-5 gap-x-14 items-center justify-between p-10 bg-gray-300 shadow-xl rounded-xl">
+        <div className="flex flex-col lg:flex-row gap-y-5 gap-x-14 items-center justify-between p-10 dark:bg-gray-700 bg-gray-300 shadow-xl rounded-xl">
           <div className="flex flex-col items-center justify-center">
             {showContent1 && (
               <div className="flex flex-col items-center justify-center gap-y-4">
@@ -44,13 +44,13 @@ function Productspage() {
                   <img
                     src={dataz.image.url}
                     alt="phone"
-                    className="max-w-screen h-auto bg-gray-200 shadow-md rounded-xl"
+                    className="max-w-screen h-auto dark:bg-gray-300 bg-gray-200 shadow-md rounded-xl"
                   />
                 </Fade>
 
                 <Link
                   onClick={handleContentView}
-                  className="py-2 px-8 bg-gray-300 shadow-xl ring-2 ring-pink-600 font-semibold rounded-md"
+                  className="py-2 px-8 bg-gray-300 dark:bg-gray-700 shadow-xl dark:ring-gray-200 dark:ring-1 ring-2 ring-pink-600 font-semibold rounded-md"
                 >
                   3D model
                 </Link>
@@ -82,7 +82,7 @@ function Productspage() {
                 </Fade>
                 <Link
                   onClick={handleContentView}
-                  className="py-2 px-8 bg-gray-300 shadow-xl ring-2 ring-pink-600 font-semibold rounded-md"
+                  className="py-2 px-8 bg-gray-300 dark:bg-gray-700 shadow-xl dark:ring-gray-200 dark:ring-1 ring-2 ring-pink-600 font-semibold rounded-md"
                 >
                   Picture
                 </Link>

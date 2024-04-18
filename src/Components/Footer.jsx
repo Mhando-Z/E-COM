@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className=" bg-gray-400 bg-opacity-35  p-10">
+    <div className=" dark:text-gray-200 bg-gray-400 bg-opacity-35  p-10">
       <div className="container mx-auto flex md:flex-row gap-y-5 flex-col justify-between">
         <div className="text-center md:text-left">
           <Link to={"/"}>

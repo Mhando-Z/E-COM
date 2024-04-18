@@ -2,14 +2,14 @@ import React from "react";
 
 function Aboutuspage() {
   return (
-    <div className="container mx-auto justify-center">
+    <div className="container dark:text-gray-200 mx-auto justify-center">
       <div className="flex flex-col">
         <h1 className="text-4xl p-4 font-semibold mb-4 text-center md:text-left">
           About Us
         </h1>
         <div className="flex flex-col gap-y-5 justify-between">
-          <div className="p-5 bg-slate-300 shadow-md rounded-xl">
-            <h1 className="md:text-3xl mb-2 text-2xl font-semibold uppercase bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
+          <div className="p-5  dark:bg-gray-700 bg-slate-300 shadow-md rounded-xl">
+            <h1 className="md:text-3xl dark:text-black mb-2 text-2xl font-semibold uppercase bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
               Introduction
             </h1>
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
@@ -20,8 +20,8 @@ function Aboutuspage() {
               wallet feeling light.
             </h2>
           </div>
-          <div className="p-5 bg-slate-300 shadow-md rounded-xl">
-            <h1 className="md:text-3xl text-2xl mb-2 uppercase font-semibold bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
+          <div className="p-5  dark:bg-gray-700 bg-slate-300 shadow-md rounded-xl">
+            <h1 className="md:text-3xl dark:text-black text-2xl mb-2 uppercase font-semibold bg-gradient-to-r from-gray-400 p-2 via-transparent to-transparent">
               Mission
             </h1>
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter ">
@@ -34,7 +34,7 @@ function Aboutuspage() {
               you're getting great value without compromising on quality.
             </h2>
           </div>
-          <div className="p-5 bg-slate-300 shadow-md rounded-xl ">
+          <div className="p-5  dark:bg-gray-700 bg-slate-300 shadow-md rounded-xl ">
             <h2 className="text-2xl text-justify md:tracking-normal tracking-tighter">
               Our user-friendly website makes browsing and ordering a breeze, so
               you can spend less time shopping and more time enjoying your new
