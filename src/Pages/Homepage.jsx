@@ -102,7 +102,7 @@ function Homepage() {
               type="search"
               onKeyDown={(e) => handlePress(e)}
               onChange={(e) => handleSearch(e)}
-              className="relative w-full font-semibold text-start md:w-[400px] outline-none focus:outline-none ring-2 ring-pink-500 transition ease-in-out duration-700 bg-gray-200 bg-opacity-85 rounded-lg p-1"
+              className="relative w-full font-semibold text-start md:w-[400px] outline-none focus:outline-none ring-2 ring-pink-500  bg-gray-200 bg-opacity-85 rounded-lg p-1"
             />
             <Link
               to={`SearchResults/${query}`}

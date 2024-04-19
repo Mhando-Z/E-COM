@@ -41,12 +41,12 @@ const SearchResults = () => {
             type="search"
             onKeyDown={(e) => handlePress(e)}
             onChange={(e) => handleSearch(e)}
-            className="relative w-full text-start md:w-[400px] outline-none focus:outline-none ring-2 ring-pink-500 transition ease-in-out duration-700 bg-gray-200 bg-opacity-85 rounded-l-lg p-1"
+            className="relative w-full text-start md:w-[400px] dark:text-black outline-none focus:outline-none ring-2 ring-pink-500 bg-gray-200 bg-opacity-85 md:rounded-l-lg p-1"
           />
           <Link
             to={`/SearchResults/${query}`}
             onClick={() => setQuery(() => " ")}
-            className="py-2 px-4 bg-pink-500 text-white rounded-r-lg font-semibold "
+            className="py-1 px-4 bg-pink-500 text-white md:rounded-r-lg font-semibold "
           >
             <SearchIcon />
             Search

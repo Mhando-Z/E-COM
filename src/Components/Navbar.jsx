@@ -22,7 +22,7 @@ function Navbar() {
   };
 
   return (
-    <div className="dark:text-gray-200">
+    <div className="">
       <div className="dark:bg-gray-700 p-1 dark:text-gray-200 bg-gray-300 relative md:p-2 md:mb-16 mb-3 shadow-xl py-2 mt-2 flex container mx-auto items-center justify-between">
         <div className="">
           <NavLink className="" to={"/"}>
