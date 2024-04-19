@@ -2,8 +2,8 @@ import React from "react";
 
 function Aboutuspage() {
   return (
-    <div className="container dark:text-gray-200 mx-auto justify-center">
-      <div className="flex flex-col">
+    <div className="container mx-auto justify-center">
+      <div className="flex flex-col  dark:text-gray-200">
         <h1 className="text-4xl p-4 font-semibold mb-4 text-center md:text-left">
           About Us
         </h1>

@@ -68,20 +68,20 @@ function Navbar() {
           </NavLink>
         </div>
 
-        <div className="hidden lg:flex  dark:text-gray-200 items-center gap-x-3">
+        <div className="hidden lg:flex items-center gap-x-3">
           <NavLink to={"/Cartpage"}>
             <IconButton aria-label="cart">
-              <Badge badgeContent={cart.total_items} color="primary">
+              <Badge badgeContent={cart.total_items} color="secondary">
                 <ShoppingCartIcon sx={{ fontSize: "2.2rem", mr: "7px" }} />
               </Badge>
             </IconButton>
           </NavLink>
         </div>
         {/* For smalll screen */}
-        <div className="lg:hidden flex dark:text-gray-200 items-center gap-y-2">
+        <div className="lg:hidden flex items-center gap-y-2">
           <NavLink to={"/Cartpage"}>
             <IconButton aria-label="cart">
-              <Badge badgeContent={cart.total_items} color="primary">
+              <Badge badgeContent={cart.total_items} color="secondary">
                 <ShoppingCartIcon
                   sx={{ fontSize: "1.7rem", mr: "7px", alignItems: "center" }}
                 />
