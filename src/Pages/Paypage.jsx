@@ -156,7 +156,7 @@ function Paypage() {
                           </button>
                           <button
                             onClick={handleClose}
-                            className="text-xl font-semibold w-full py-2 px-8 rounded-lg bg-slate-200 "
+                            className="text-xl font-semibold dark:text-black w-full py-2 px-8 rounded-lg bg-slate-200 "
                           >
                             Cancel
                           </button>

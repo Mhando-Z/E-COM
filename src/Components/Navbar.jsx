@@ -67,7 +67,6 @@ function Navbar() {
             </h1>
           </NavLink>
         </div>
-
         <div className="hidden lg:flex items-center gap-x-3">
           <NavLink to={"/Cartpage"}>
             <IconButton aria-label="cart">
