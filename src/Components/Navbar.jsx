@@ -71,7 +71,10 @@ function Navbar() {
           <NavLink to={"/Cartpage"}>
             <IconButton aria-label="cart">
               <Badge badgeContent={cart.total_items} color="secondary">
-                <ShoppingCartIcon sx={{ fontSize: "2.2rem", mr: "7px" }} />
+                <ShoppingCartIcon
+                  className="dark:text-gray-200"
+                  sx={{ fontSize: "2.2rem", mr: "7px" }}
+                />
               </Badge>
             </IconButton>
           </NavLink>
@@ -82,6 +85,7 @@ function Navbar() {
             <IconButton aria-label="cart">
               <Badge badgeContent={cart.total_items} color="secondary">
                 <ShoppingCartIcon
+                  className="dark:text-gray-200"
                   sx={{ fontSize: "1.7rem", mr: "7px", alignItems: "center" }}
                 />
               </Badge>

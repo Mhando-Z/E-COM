@@ -49,7 +49,7 @@ function Paypage() {
                 Click, button below to fill out your actual location details, so
                 it becomes easy to send you purchased product
               </h1>
-              <div className="">
+              <div>
                 <Dialog
                   open={open}
                   fullWidth={true}
@@ -59,12 +59,13 @@ function Paypage() {
                   onClose={handleClose}
                   aria-describedby="alert-dialog-slide-description"
                 >
-                  <div>
+                  <div className=" dark:bg-gray-700 dark:text-gray-200">
                     <h1 className="text-2xl p-2 font-semibold text-center">
                       Add new Address
                     </h1>
                   </div>
-                  <DialogContent>
+
+                  <DialogContent className=" dark:bg-gray-800 dark:text-gray-200">
                     <div className="flex flex-col p-10">
                       <div className="flex flex-col gap-y-2 mb-4">
                         <h1 className="md:text-2xl text-xl font-semibold">
@@ -88,12 +89,12 @@ function Paypage() {
                         <div className="flex gap-y-3 md:flex-row flex-col items-center gap-x-10 justify-between">
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Name"
                           />
                           <input
                             type="number"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Phone"
                           />
                         </div>
@@ -105,12 +106,12 @@ function Paypage() {
                         <div className="flex gap-y-3 md:flex-row flex-col items-center gap-x-10 justify-between">
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Street,House"
                           />
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Unit(optional)"
                           />
                         </div>
@@ -119,17 +120,17 @@ function Paypage() {
                         <div className="flex md:flex-row flex-col gap-y-3 gap-x-10 items-center justify-between">
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Province"
                           />
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="City"
                           />
                           <input
                             type="text"
-                            className="w-full ring-2 ring-pink-500 md:p-2 rounded-md"
+                            className="w-full ring-2 dark:text-black ring-pink-500 md:p-2 rounded-md"
                             placeholder="Zip code"
                           />
                         </div>
@@ -138,7 +139,7 @@ function Paypage() {
                         <div className="flex flex-row items-center gap-x-5">
                           <input
                             type="checkbox"
-                            className="ring-2 ring-pink-500 rounded-sm"
+                            className="ring-2 dark:text-black ring-pink-500 rounded-sm"
                             placeholder="Province"
                           />
                           <h1 className="md:text-2xl text-lg">
