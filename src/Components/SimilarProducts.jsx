@@ -59,7 +59,7 @@ function SimilarProducts({ Categories }) {
         <div className="container mx-auto mt-5">
           <div>
             <Fade in={true} timeout={1800}>
-              <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+              <div className="grid xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
                 {groupedData[Categories.toLowerCase()]
                   ?.slice(0, visibleItems)
                   .map((dt, index) => {

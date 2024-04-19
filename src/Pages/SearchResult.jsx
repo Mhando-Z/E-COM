@@ -64,7 +64,7 @@ const SearchResults = () => {
         </div>
       ) : (
         <div className="mt-2">
-          <div className=" grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid-cols-5 items-center justify-center">
+          <div className=" grid xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid-cols-5 items-center justify-center">
             {dataFilterd.slice(0, visibleItems).map((dt, index) => {
               return <Product key={index} val={index} data={dt} />;
             })}
