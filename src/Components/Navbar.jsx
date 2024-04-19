@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
@@ -130,6 +130,9 @@ function Navbar() {
             </div>
           )}
         </div>
+      </div>
+      <div>
+        <Outlet />
       </div>
     </div>
   );

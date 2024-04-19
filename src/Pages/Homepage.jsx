@@ -141,7 +141,7 @@ function Homepage() {
       {showContent1 && (
         <div className="container mx-auto">
           <Grow in={true} timeout={1800}>
-            <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-4 xl:grid-cols-5 justify-center">
+            <div className="grid xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-4 xl:grid-cols-5 justify-center">
               {datax.map((dt, index) => {
                 return (
                   <Product

@@ -38,7 +38,7 @@ function Paypage() {
   };
 
   return (
-    <div className="bg-gray-300 shadow-xl rounded-xl container mx-auto">
+    <div className="bg-gray-300 dark:bg-gray-700 dark:text-gray-200 shadow-xl rounded-xl container mx-auto">
       <div className=" flex md:flex-row p-10 flex-col gap-y-5 justify-center md:space-x-10 md:justify-evenly">
         <div className="flex flex-col gap-y-5 max-w-md">
           {/* Address */}
@@ -178,7 +178,7 @@ function Paypage() {
           <div className="flex flex-col">
             <h1 className="text-2xl font-semibold">Choose Payment methode</h1>
             <div className="mt-2">
-              <p className="text-lg ring-2 ring-red-600 rounded-xl p-3 text-red-700 ">
+              <p className="text-lg ring-2 ring-red-600 rounded-xl p-3 dark:text-red-100 text-red-700 ">
                 Sorry at the moment we havent integrated payment method,
                 check-us via Whatssap by clicking the whatssap icon
                 <Link
