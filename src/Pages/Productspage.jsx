@@ -34,7 +34,6 @@ function Productspage() {
   };
   const dataz = data.find((dt) => dt.id === id);
 
-  console.log(dataz);
   return (
     <div className="flex flex-col justify-center dark:text-gray-200">
       <div className="flex items-center justify-center">
