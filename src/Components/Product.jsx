@@ -12,7 +12,7 @@ function Product({ data }) {
   return (
     <div>
       <div className="flex max-w-sm flex-col items-center justify-center">
-        <div className="flex flex-col p-5 dark:bg-gray-600 dark:text-gray-200 gap-5 rounded-xl items-center bg-gray-300 shadow-xl">
+        <div className="flex flex-col p-5  dark:bg-gray-600 dark:text-gray-200 gap-5 rounded-xl items-center bg-gray-300 shadow-xl">
           <Link onClick={scrollToTop} to={`/Productspage/${data.id}`}>
             <img
               src={data.image.url}

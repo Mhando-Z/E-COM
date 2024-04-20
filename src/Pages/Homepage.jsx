@@ -179,7 +179,7 @@ function Homepage() {
             {/*  CATEGORIZATIONS  SECTIONS*/}
             <div>
               <Grow in={true} timeout={1800}>
-                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 items-center justify-center">
+                <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 justify-center">
                   {groupedData[category]
                     ?.slice(0, visibleItems)
                     .map((dt, index) => {
