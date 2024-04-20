@@ -36,7 +36,7 @@ function Productspage() {
 
   return (
     <div className="flex flex-col justify-center dark:text-gray-200">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center container mx-auto">
         <div className="flex flex-col lg:flex-row gap-y-5 gap-x-14 items-center justify-between p-10 dark:bg-gray-700 bg-gray-300 shadow-xl rounded-xl">
           <div className="flex flex-col items-center justify-center">
             {showContent1 && (
@@ -95,7 +95,7 @@ function Productspage() {
               <h1 className="lg:text-6xl max-w-lg text-4xl mb-5 text-center">
                 {dataz.name}
               </h1>
-              <h1 className="text-xl max-w-lg text-justify">
+              <h1 className="text-xl max-w-lg tracking-tighter text-justify">
                 {dataz.description.replace(/<\/?[^>]+(>|$)/g, "")}
               </h1>
             </div>
