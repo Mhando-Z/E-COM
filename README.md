@@ -1,6 +1,6 @@
 # E-COM
 
-E-COM is a movie reference website created using React, Tailwind CSS, and Material UI. It serves as an online shop specializing in selling tech devices directly from China at affordable prices. The product delivery is facilitated via airplane for faster shipping. The website is designed to be responsive, ensuring a seamless user experience across different devices.
+E-COM is an online shop created using React, Tailwind CSS, and Material UI. Specializing in selling tech devices directly from China at affordable prices. The product delivery is facilitated via airplane for faster shipping. The website is designed to be responsive, ensuring a seamless user experience across different devices.
 
 ## Features
 
@@ -18,12 +18,12 @@ E-COM is a movie reference website created using React, Tailwind CSS, and Materi
 
 ## Screenshots
 
-![Screenshot 1](/ecommerce/src/GitPictures/desktop%20white.png)
-![Screenshot 1](/ecommerce/src/GitPictures/desktop%20dark.png)
-![Screenshot 1](/ecommerce/src/GitPictures/02.png)
-![Screenshot 1](/ecommerce/src/GitPictures/dark02.png)
-![Screenshot 1](/ecommerce/src/GitPictures/3d.png)
-![Screenshot 1](/ecommerce/src/GitPictures/dark04.png)
+![Screenshot 1](/src/GitPictures/desktop%20white.png)
+![Screenshot 1](/src/GitPictures/desktop%20dark.png)
+![Screenshot 1](/src/GitPictures/02.png)
+![Screenshot 1](/src/GitPictures/dark02.png)
+![Screenshot 1](/src/GitPictures/3d.png)
+![Screenshot 1](/src/GitPictures/dark04.png)
 
 <!-- Add more screenshots if needed -->
 
