@@ -41,13 +41,19 @@ function Productspage() {
           <div className="flex flex-col items-center justify-center">
             {showContent1 && (
               <div className="flex flex-col items-center justify-center gap-y-4">
-                <Fade in={true} timeout={1800}>
+                <Fade in={true} timeout={900}>
+                  <div
+                    className="sm:h-[556px] sm:w-[447px] h-[500px] w-[300px]   bg-no-repeat bg-center bg-contain"
+                    style={{ backgroundImage: `url("${dataz.image.url}")` }}
+                  ></div>
+                </Fade>
+                {/* <Fade in={true} timeout={1800}>
                   <img
                     src={dataz.image.url}
                     alt="phone"
                     className="max-w-screen h-auto dark:bg-gray-300 bg-gray-200 shadow-md rounded-xl"
                   />
-                </Fade>
+                </Fade> */}
 
                 <Link
                   onClick={handleContentView}

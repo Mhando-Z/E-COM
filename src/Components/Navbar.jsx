@@ -29,7 +29,7 @@ function Navbar() {
             <h1 className="uppercase md:text-2xl text-xl font-bold">E-com</h1>
           </NavLink>
         </div>
-        <div className="md:flex hidden items-center gap-x-10 justify-between">
+        <div className="md:flex-1 md:flex hidden items-center gap-x-10 justify-center">
           <NavLink
             className={({ isActive }) =>
               isActive
@@ -92,6 +92,7 @@ function Navbar() {
             </IconButton>
           </NavLink>
         </div>
+        {/* Menuicon logic or humbuger menu logic */}
         <div onClick={handleMenuVisibility} className="md:hidden flex">
           <MenuIcon sx={{ fontSize: "1.7rem" }} className="" />
           {isMenuVisible && (

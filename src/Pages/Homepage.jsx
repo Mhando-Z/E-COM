@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
-import Grow from "@mui/material/Grow";
+import { Fade } from "@mui/material";
 import Switcher from "../Darktheme/Switcher";
 
 function Homepage() {
@@ -140,7 +140,7 @@ function Homepage() {
       {/* Products show */}
       {showContent1 && (
         <div className="container mx-auto">
-          <Grow in={true} timeout={1800}>
+          <Fade in={true} timeout={800}>
             <div className="grid xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-4 xl:grid-cols-5 justify-center">
               {datax.map((dt, index) => {
                 return (
@@ -153,7 +153,7 @@ function Homepage() {
                 );
               })}
             </div>
-          </Grow>
+          </Fade>
           <div className="mt-10 text-xl dark:bg-gray-700 bg-gray-300 p-2 shadow-xl flex items-center justify-center ">
             <ReactPaginate
               className="text-xl flex items-center justify-evenly gap-x-3"
@@ -178,7 +178,7 @@ function Homepage() {
           <div className="container mx-auto mt-5">
             {/*  CATEGORIZATIONS  SECTIONS*/}
             <div>
-              <Grow in={true} timeout={1800}>
+              <Fade in={true} timeout={800}>
                 <div className="grid sm:grid-cols-3 xs:grid-cols-2 [150px]:grid-cols-1 gap-5 md:grid md:grid-cols-5 justify-center">
                   {groupedData[category]
                     ?.slice(0, visibleItems)
@@ -193,7 +193,7 @@ function Homepage() {
                       );
                     })}
                 </div>
-              </Grow>
+              </Fade>
               <div className="mt-10 dark:bg-gray-700 dark:text-gray-200 text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-evenly ">
                 <button
                   className="text-xl py-1 px-10 ring-2 dark:ring-gray-100 dark:ring-1 ring-pink-500 font-semibold rounded-lg"
