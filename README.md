@@ -18,8 +18,8 @@ E-COM is an online shop created using React, Tailwind CSS, and Material UI. Spec
 
 ## Screenshots
 
-![Screenshot 1](/src/GitPictures/desktop%20white.png)
-![Screenshot 1](/src/GitPictures/desktop%20dark.png)
+![Screenshot 1](/src/GitPictures/whitetheme.png)
+![Screenshot 1](/src/GitPictures/darktheme.png)
 ![Screenshot 1](/src/GitPictures/02.png)
 ![Screenshot 1](/src/GitPictures/dark02.png)
 ![Screenshot 1](/src/GitPictures/3d.png)

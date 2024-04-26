@@ -11,7 +11,10 @@ export function ProductsProvider({ children }) {
 
   async function getProducts() {
     try {
-      const { data } = await commerce.products.list({ limit: 199 });
+      const { data } = await commerce.products.list({
+        limit: 199,
+        sortDirection: "desc",
+      });
       setData(data);
     } catch (error) {}
   }
