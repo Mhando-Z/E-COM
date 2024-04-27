@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import ProductsContext from "../Context/ProductsContext";
 import Product from "../Components/Product";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchResults = () => {
@@ -10,6 +10,12 @@ const SearchResults = () => {
   const [visibleItems, setVisible] = useState(10);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const ref = useRef(null);
+
+  //handle reset input function
+  const handleReset = () => {
+    ref.current.value = "";
+  };
 
   const newData = [...data];
   const dataFilterd = newData.filter((dt) => {
@@ -19,9 +25,19 @@ const SearchResults = () => {
   const handleSearch = (e) => {
     setQuery(e.target.value.toLocaleLowerCase());
   };
-  const handlePress = (e) => {
-    if (e.code === "Enter") {
+  const HandleSearch = () => {
+    if (query.length !== 0) {
       navigate(`/SearchResults/${query}`);
+      handleReset();
+    }
+  };
+  // Keypress function
+  const handlePress = (e) => {
+    if (query.length !== 0) {
+      if (e.keyCode === 13) {
+        navigate(`/SearchResults/${query}`);
+        handleReset();
+      }
     }
   };
 
@@ -38,19 +54,19 @@ const SearchResults = () => {
       <div className="flex flex-col">
         <div className="mb-5 flex flex-col md:flex-row gap-y-3 items-center">
           <input
+            ref={ref}
             type="search"
             onKeyDown={(e) => handlePress(e)}
             onChange={(e) => handleSearch(e)}
-            className="relative w-full text-start md:w-[400px] dark:text-black outline-none focus:outline-none ring-2 ring-pink-500 bg-gray-200 bg-opacity-85 md:rounded-l-lg p-1"
+            className="outline-none relative w-full text-start md:w-[400px] dark:text-black ring-2 ring-pink-500 bg-gray-200 bg-opacity-85 md:rounded-l-lg p-1"
           />
-          <Link
-            to={`/SearchResults/${query}`}
-            onClick={() => setQuery(() => " ")}
+          <button
+            onClick={HandleSearch}
             className="py-1 px-4 bg-pink-500 text-white md:rounded-r-lg font-semibold "
           >
             <SearchIcon />
             Search
-          </Link>
+          </button>
         </div>
       </div>
       <div className="bg-gray-300 dark:bg-gray-700 dark:text-gray-200 shadow-xl mt-5 mb-5 rounded-lg p-3">

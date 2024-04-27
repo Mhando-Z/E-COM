@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Product from "./../Components/Product";
 import ReactPaginate from "react-paginate";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ProductsContext from "../Context/ProductsContext";
 import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
@@ -38,9 +38,18 @@ function Homepage() {
     setShowContent2(!showContent2);
   };
 
-  const handlePress = (e) => {
-    if (e.code === "Enter") {
+  //search function logic
+  const HandleSearch = () => {
+    if (query.length !== 0) {
       navigate(`SearchResults/${query}`);
+    }
+  };
+  // keypress function
+  const handlePress = (e) => {
+    if (query.length !== 0) {
+      if (e.keyCode === 13) {
+        navigate(`SearchResults/${query}`);
+      }
     }
   };
 
@@ -104,14 +113,13 @@ function Homepage() {
               onChange={(e) => handleSearch(e)}
               className="relative w-full font-semibold text-start md:w-[400px] outline-none focus:outline-none ring-2 ring-pink-500  bg-gray-200 bg-opacity-85 rounded-lg p-1"
             />
-            <Link
-              to={`SearchResults/${query}`}
-              onClick={() => setQuery(() => " ")}
+            <button
+              onClick={HandleSearch}
               className="absolute py-1 px-4 bg-pink-500 text-white rounded-lg font-semibold right-0"
             >
               <SearchIcon />
               Search
-            </Link>
+            </button>
           </div>
           <div className="flex flex-row justify-center  gap-x-5  ">
             <div className="flex flex-row items-center gap-x-5">
