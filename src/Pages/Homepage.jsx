@@ -7,6 +7,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ScrollToTopButton from "../Components/pageScroll";
 import { Fade } from "@mui/material";
 import Switcher from "../Darktheme/Switcher";
+import { Dots } from "react-activity";
+import "react-activity/dist/library.css";
 
 function Homepage() {
   const { data } = useContext(ProductsContext);
@@ -100,6 +102,20 @@ function Homepage() {
       setShowContent2(true);
     }
   };
+  if (!datax || datax.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Dots size={50} className="hidden xl:flex" color="gray" speed={0.5} />
+        <Dots
+          size={40}
+          className="lg:flex hidden xl:hidden"
+          color="gray"
+          speed={0.5}
+        />
+        <Dots size={30} className="sm:hidden flex" color="gray" speed={0.5} />
+      </div>
+    );
+  }
 
   return (
     <div>

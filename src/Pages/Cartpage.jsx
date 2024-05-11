@@ -34,7 +34,7 @@ function Cartpage() {
   if (!cart || cart.length === 0) {
     return (
       <div className="flex justify-center items-center h-auto">
-        <h1>Cart is empty.</h1>
+        <h1 className="dark:text-slate-200">Cart is empty.</h1>
       </div>
     );
   }
