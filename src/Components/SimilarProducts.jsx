@@ -69,14 +69,14 @@ function SimilarProducts({ Categories }) {
             </Fade>
             <div className="mt-10 dark:bg-gray-700 dark:text-gray-200 text-xl bg-gray-300 p-2 shadow-xl flex items-center justify-evenly ">
               <button
-                className="text-xl py-1 px-10 ring-2 dark:ring-gray-100 dark:ring-1 ring-pink-500 font-semibold rounded-lg"
+                className="sm:text-xl py-1 px-10 ring-2 dark:ring-gray-100 dark:ring-1 ring-pink-500 font-semibold rounded-lg"
                 onClick={loadMore}
               >
                 Load More
               </button>
 
               <button
-                className="text-xl py-1 px-10  ring-2 dark:ring-gray-100 dark:ring-1 ring-pink-500 font-semibold rounded-lg"
+                className="sm:text-xl py-1 px-10  ring-2 dark:ring-gray-100 dark:ring-1 ring-pink-500 font-semibold rounded-lg"
                 onClick={loadLess}
               >
                 Load Less

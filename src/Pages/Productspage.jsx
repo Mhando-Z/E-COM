@@ -5,6 +5,8 @@ import ProductsContext from "../Context/ProductsContext";
 import CartContext from "../Context/CartsContext";
 import SimilarProducts from "../Components/SimilarProducts";
 import { Fade } from "@mui/material";
+import { Dots } from "react-activity";
+import "react-activity/dist/library.css";
 
 function Productspage() {
   const { data } = useContext(ProductsContext);
@@ -20,8 +22,15 @@ function Productspage() {
   const { id } = useParams();
   if (!data || data.length === 0) {
     return (
-      <div className="flex items-center justify-center">
-        <h1>Loading...</h1>
+      <div className="flex items-center justify-center min-h-screen">
+        <Dots size={50} className="hidden xl:flex" color="gray" speed={0.5} />
+        <Dots
+          size={40}
+          className="lg:flex hidden xl:hidden"
+          color="gray"
+          speed={0.5}
+        />
+        <Dots size={30} className="sm:hidden flex" color="gray" speed={0.5} />
       </div>
     );
   }
@@ -98,10 +107,10 @@ function Productspage() {
           </div>
           <div className="flex flex-col items-center justify-center gap-1">
             <div className="mb-5">
-              <h1 className="lg:text-6xl max-w-lg text-4xl mb-5 text-center">
+              <h1 className="lg:text-6xl max-w-lg text-4xl font-bold mb-5 text-center">
                 {dataz.name}
               </h1>
-              <h1 className="text-xl max-w-lg tracking-tighter text-justify">
+              <h1 className="md:text-xl max-w-lg tracking-tighter text-justify">
                 {dataz.description.replace(/<\/?[^>]+(>|$)/g, "")}
               </h1>
             </div>

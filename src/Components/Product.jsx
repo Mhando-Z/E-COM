@@ -24,10 +24,10 @@ function Product({ data }) {
               className="max-w-screen dark:bg-gray-300 bg-gray-200 rounded-xl h-auto shadow-md"
             /> */}
             <div className="flex bg-slate-400 bg-opacity-25 dark:bg-slate-800 dark:bg-opacity-20 flex-col p-5 items-center h-28 justify-center gap-1">
-              <h1 className="xl:text-2xl text-xl text-center font-sans font-semibold">
+              <h1 className="md:text-xl text-lg text-center font-sans font-semibold">
                 {data.name}
               </h1>
-              <h1 className="xl:text-xl text-lg text-center font-sans ">
+              <h1 className="md:text-lg text-center font-sans ">
                 {data.price.formatted_with_symbol}
               </h1>
             </div>
