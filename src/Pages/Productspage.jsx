@@ -119,21 +119,25 @@ function Productspage() {
               <h1 className="md:text-2xl text-xl font-semibold text-left md:text-center">
                 Price: {dataz.price.formatted_with_symbol}
               </h1>
-              <div className="lg:flex hidden flex-col mt-3 lg:mt-10 lg:flex-row gap-x-24 gap-y-5 items-center justify-center">
-                <Link
-                  onClick={scrollToTop}
-                  className="md:text-xl py-2 font-semibold px-10 bg-pink-500 text-white text-center"
-                  to={`/Paypage/${dataz.id}`}
-                >
-                  Buy
-                </Link>
-                <button
-                  onClick={() => handleAddtoCart(dataz.id, 1)}
-                  className="md:text-xl py-2 px-10 font-semibold bg-pink-500 text-white text-center"
-                >
-                  <ShoppingCartIcon sx={{ fontSize: "1.4rem", mr: "7px" }} />
-                  Add Cart
-                </button>
+              <div className="lg:flex hidden flex-col mt-3 lg:mt-10 lg:flex-row xl:gap-x-24 gap-x-20 gap-y-5 items-center justify-between">
+                <div>
+                  <Link
+                    onClick={scrollToTop}
+                    className="md:text-xl py-2 font-semibold px-10 bg-pink-500 text-white text-center"
+                    to={`/Paypage/${dataz.id}`}
+                  >
+                    Buy
+                  </Link>
+                </div>
+                <div>
+                  <button
+                    onClick={() => handleAddtoCart(dataz.id, 1)}
+                    className="md:text-xl py-2 px-10 font-semibold bg-pink-500 text-white text-center"
+                  >
+                    <ShoppingCartIcon sx={{ fontSize: "1.4rem", mr: "7px" }} />
+                    Add Cart
+                  </button>
+                </div>
               </div>
               {/* Small screen buttons */}
               <div className="lg:hidden flex flex-col mt-3 gap-y-5 items-center justify-center">

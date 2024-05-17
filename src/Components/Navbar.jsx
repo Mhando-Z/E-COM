@@ -67,13 +67,13 @@ function Navbar() {
             </h1>
           </NavLink>
         </div>
-        <div className="hidden lg:flex items-center gap-x-3">
+        <div className="hidden lg:flex items-center">
           <NavLink to={"/Cartpage"}>
             <IconButton aria-label="cart">
               <Badge badgeContent={cart.total_items} color="secondary">
                 <ShoppingCartIcon
                   className="dark:text-gray-200"
-                  sx={{ fontSize: "2.2rem", mr: "7px" }}
+                  sx={{ fontSize: "2.2rem" }}
                 />
               </Badge>
             </IconButton>
