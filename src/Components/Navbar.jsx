@@ -38,7 +38,7 @@ function Navbar() {
             }
             to={"/"}
           >
-            <h1 className="text-xl xl:text-2xl  hover:underline  dark:hover:text-blue-400  dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
+            <h1 className="md:text-xl xl:text-2xl  hover:underline  dark:hover:text-blue-400  dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
               Home
             </h1>
           </NavLink>
@@ -50,7 +50,7 @@ function Navbar() {
             }
             to={`/AboutUs`}
           >
-            <h1 className="text-xl xl:text-2xl hover:underline  dark:hover:text-blue-400   dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
+            <h1 className="md:text-xl xl:text-2xl hover:underline  dark:hover:text-blue-400   dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
               About Us
             </h1>
           </NavLink>
@@ -62,7 +62,7 @@ function Navbar() {
             }
             to={`/ContactUs`}
           >
-            <h1 className="text-xl xl:text-2xl hover:underline dark:hover:text-blue-400  dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
+            <h1 className="md:text-xl xl:text-2xl hover:underline dark:hover:text-blue-400  dark:hover:decoration-gray-200 hover:font-semibold hover:decoration-pink-600 hover:underline-offset-8 hover:text-pink-600">
               Contact Us
             </h1>
           </NavLink>
@@ -106,7 +106,7 @@ function Navbar() {
                   }
                   to={`/`}
                 >
-                  <h1 onClick={scrollToTop} className="text-xl xl:text-2xl ">
+                  <h1 onClick={scrollToTop} className="md:text-lg">
                     Home
                   </h1>
                 </NavLink>
@@ -116,7 +116,7 @@ function Navbar() {
                   }
                   to={"/AboutUs"}
                 >
-                  <h1 onClick={scrollToTop} className="text-xl xl:text-2xl ">
+                  <h1 onClick={scrollToTop} className="md:text-lg">
                     About Us
                   </h1>
                 </NavLink>
@@ -126,7 +126,7 @@ function Navbar() {
                   }
                   to={`/ContactUs`}
                 >
-                  <h1 onClick={scrollToTop} className="text-xl xl:text-2xl ">
+                  <h1 onClick={scrollToTop} className="md:text-lg">
                     Contact Us
                   </h1>
                 </NavLink>
